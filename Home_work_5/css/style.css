@@ -1,0 +1,28 @@
+.Open_Sans {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.center {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wavy {
+    word-spacing: 30px;
+    text-decoration: overline wavy;
+    color: #560277;
+    text-shadow: 1px 1px 2px #383838; 
+    /* С тенью всё правильно? Я имею введу указания в пиксилях (простыми цифрами она не отображлась). */
+}
+.double {
+    letter-spacing: 5px;
+    text-decoration: underline double;
+}
