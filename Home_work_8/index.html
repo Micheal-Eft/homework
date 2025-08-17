@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+
+        <img class="logo" src="#" alt="">
+
+        <nav>
+
+            <!-- Кнопка Home -->
+
+            <div class="links-conteiner">
+
+                <!--
+                Эта кнопка отличаетя от соседних,
+                но отличие заключается в том,
+                что она постоянно выглядит так,
+                словно на неё навелись.
+                Поэтому нужно сделать так,
+                чтобы модификатор действовал на неё постоянно.
+                -->
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Home
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <!-- И так далее... -->
+
+                </ul>
+
+            </div>
+
+            <!-- Кнопка About -->
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    About
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <!-- И так далее... -->
+
+                </ul>
+
+            </div>
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Menu
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <!-- И так далее... -->
+
+                </ul>
+
+            </div>
+
+            <!-- Кнопка Book a table -->
+
+            <!-- Вообще,
+            это чисто ссылка,
+            но,
+            чтобы не создовать новый класс и модификатор,
+            я её оформил-бы как кнопку.
+            В "links-conteiner" я её засуну для того,
+            чтобы просто оправдать сам класс кнопки "links-conteiner__button"
+            -->
+            <div class="links-conteiner">
+                <button class="links-conteiner__button links-conteiner__button--active" onclick="document.location='#'">
+                    Book a table
+                </button>
+            </div>
+
+            <!--=== Всё ниже это кнопка Features и выплывающие от неё окна ========-->
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Features
+                </button>
+
+                <!-- Первый уравень всплывающее окно -->
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+
+                        <button class="links-conteiner__nested-button">
+                            Revolution sliders
+                        </button>
+
+                        <!-- Второй уровень всплывающее окно -->
+
+                        <ul class="links-conteiner__list links-conteiner__list--show">
+
+                            <li class="links-conteiner__item">
+
+                                <button class="links-conteiner__nested-button">
+                                    Sliders 1
+                                </button>
+
+                                <!-- Третий уровень всплывающее окно -->
+
+                                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <!-- И так далее... -->
+
+                                </ul>
+
+                            </li>
+                            <li class="links-conteiner__item">
+
+                                <button class="links-conteiner__nested-button">
+                                    Sliders 2
+                                </button>
+
+                                <!-- Третий уровень всплывающее окно -->
+
+                                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <!-- И так далее... -->
+
+                                </ul>
+
+                            </li>
+                            <!-- И так далее... -->
+
+                        </ul>
+                    </li>
+                    <li class="links-conteiner__item">
+
+                        <button class="links-conteiner__nested-button">
+                            Headers
+                        </button>
+
+                        <!-- Второй уровень всплывающее окно -->
+
+                        <ul class="links-conteiner__list links-conteiner__list--show">
+
+                            <li class="links-conteiner__item">
+
+                                <button class="links-conteiner__nested-button">
+                                    Transparent
+                                </button>
+
+                                <!-- Третий уровень всплывающее окно -->
+
+                                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <!-- И так далее... -->
+
+                                </ul>
+
+                            </li>
+                            <li class="links-conteiner__item">
+
+                                <button class="links-conteiner__nested-button">
+                                    centered
+                                </button>
+
+                                <!-- Третий уровень всплывающее окно -->
+
+                                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <li class="links-conteiner__item">
+
+                                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+
+                                    </li>
+                                    <!-- И так далее... -->
+
+                                </ul>
+
+                            </li>
+                            <!-- И так далее... -->
+
+                        </ul>
+                    </li>
+                    <!-- И так далее... -->
+
+                    <li class="links-conteiner__item">
+
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#">
+                            landing page
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- ===== Конец кнопки Features и выплывающих от неё окон =======-->
+
+            <!-- Кнопка Blog -->
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Blog
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <!-- И так далее... -->
+
+                </ul>
+
+            </div>
+
+            <!-- Кнопка Shop -->
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Shop
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <li class="links-conteiner__item">
+                        <a class="links-conteiner__link links-conteiner__link--active" href="#"></a>
+                    </li>
+                    <!-- И так далее... -->
+
+                </ul>
+
+            </div>
+
+            <!-- Кнопка Elements -->
+
+            <div class="links-conteiner">
+
+                <button class="links-conteiner__button links-conteiner__button--active">
+                    Elements
+                </button>
+
+                <ul class="links-conteiner__list links-conteiner__list--show">
+
+                    <!-- Столбик 1 -->
+
+                    <li class="links-conteiner__item">
+
+                        <h4 class="links-conteiner__title">
+                            Interactive elements
+                        </h4>
+
+                        <ul class="links-conteiner__list">
+
+                            <li class="links-conteiner__item">
+                                <a class="links-conteiner__link links-conteiner__link--active" href="#">
+                                    <img src="#" alt="">
+                                    testimonials
+                                </a>
+                            </li>
+                            <li class="links-conteiner__item">
+                                <a class="links-conteiner__link links-conteiner__link--active" href="#">
+                                    <img src="#" alt="">
+                                    blockquotes
+                                </a>
+                            </li>
+                            <!-- И так далее... -->
+
+                        </ul>
+
+                    </li>
+
+                    <!-- Столбик 2 -->
+
+                    <li class="links-conteiner__item">
+
+                        <h4 class="links-conteiner__title">
+                            standard elements
+                        </h4>
+
+                        <ul class="links-conteiner__list">
+
+                            <li class="links-conteiner__item">
+                                <a class="links-conteiner__link links-conteiner__link--active" href="#">
+                                    <img src="#" alt="">
+                                    accordion
+                                </a>
+                            </li>
+                            <li class="links-conteiner__item">
+                                <a class="links-conteiner__link links-conteiner__link--active" href="#">
+                                    <img src="#" alt="">
+                                    buttons
+                                </a>
+                            </li>
+                            <!-- И так далее... -->
+
+                        </ul>
+
+                    </li>
+
+                    <!-- И так далее ещё 2 столбика... -->
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- Инструменты для пользователя справо от навигации -->
+
+        <div class="user-conteiner">
+
+            <button class="user-conteiner__button user-conteiner__button--active"></button>
+
+            <button class="user-conteiner__basket">
+                <img src="#" alt="">
+                <span>2</span>
+            </button>
+            <button class="user-conteiner__search" href="#">
+                <img src="#" alt="">
+            </button>
+            <button class="user-conteiner__additional-menu" href="#">
+                <img src="#" alt="">
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <article>
+
+            <section class="welcoming">
+
+                <p class="welcoming__supplement-for-title"></p>
+
+                <h1 class="welcoming__title"></h1>
+
+                <p class="welcoming__text"></p>
+
+            </section>
+            <section class="reference">
+
+                <div class="title">
+
+                    <p class="title__supplement-for-title"></p>
+
+                    <h2 class="title__title"></h2>
+
+                    <img class="title__decoration" src="#" alt="">
+
+                </div>
+
+                <p class="reference__text"></p>
+
+                <img class="reference__decoration" src="#" alt="">
+
+            </section>
+            <section class="assortment">
+
+                <!-- "reverse" - модификатор для смены местами описания и картинки -->
+                <div class="position position--reverse">
+                    <div class="position_overview">
+
+                        <div class="position_title">
+
+                            <p class="position__price"></p>
+
+                            <h3 class="position__title"></h3>
+
+                            <img class="position__decoration" src="#" alt="">
+
+                            <p class="position__composition"></p>
+
+                        </div>
+
+                        <img class="pic" src="#" alt="">
+
+                    </div>
+                </div>
+
+                <div class="position position--reverse">
+                    <div class="position_overview">
+
+                        <div class="position_title">
+
+                            <p class="position__price"></p>
+
+                            <h3 class="position__title"></h3>
+
+                            <img class="position__decoration" src="#" alt="">
+
+                            <p class="position__composition"></p>
+
+                        </div>
+
+                        <img class="pic" src="#" alt="">
+
+                    </div>
+                    <!-- И так далее другие блюда... -->
+
+                </div>
+                
+            </section>
+
+        </article>
+
+    </main>
+</body>
+
+</html>
