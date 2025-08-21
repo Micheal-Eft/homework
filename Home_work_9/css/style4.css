@@ -1,0 +1,45 @@
+body {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    background: rgb(53, 53, 53);
+    height: 20vh;
+    width: 20vh;
+    border-radius: 10px;
+}
+
+.text {
+    transition-delay: 3s;
+    visibility: hidden;
+}
+
+.line {
+    transition: 3s;
+    content: '';
+    position: absolute;
+    top: 25vh;
+    left: 5vw;
+    height: 10px;
+    width: 0;
+    background: white;
+}
+
+.button:hover{
+    background: rgb(1, 158, 1);
+}
+
+.button:hover .line {
+    width: 90vw;
+}
+
+.button:hover .text {
+    visibility: visible;
+}
