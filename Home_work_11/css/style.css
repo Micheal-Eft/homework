@@ -1,0 +1,282 @@
+/*===== Общее =====*/
+
+:root {
+    --white-text: #F8FCFF;
+    --blue-text: #1D6FB6;
+}
+
+body {
+    background: #F8FCFF;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #25282B;
+    font-size: 16px;
+    font-weight: 400;
+    min-width: 320px;
+}
+
+/*===== header =====*/
+
+header {
+    margin: 30px auto;
+    padding: 0 15px;
+    min-height: 48px;
+    max-width: 1230px;
+    line-height: 150%;
+    display: grid;
+    align-items: center;
+    gap: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px 30px;
+    flex-wrap: wrap;
+}
+
+.header__social-network {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px 30px;
+    flex-wrap: wrap;
+}
+
+/*===== main =====*/
+
+main {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    margin-bottom: 120px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    max-width: 288px;
+    width: 100%;
+    max-height: 56px;
+    height: 100%;
+    border-radius: 100px;
+    background: #D0DCE7;
+    color: var(--blue-text);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop {
+    font-weight: 500;
+    margin-bottom: 120px;
+    display: flex;
+    gap: 120px 15px;
+    justify-content: space-between;
+}
+
+/* ===== acide ===== ----------*/
+
+aside {
+    min-height: 1170px;
+    max-width: 282px;
+    width: 100%;
+    border: 2px solid #D0DCE7;
+    margin-bottom: auto;
+}
+
+aside ul {
+    display: grid;
+    row-gap: 20px;
+
+    position: sticky;
+    top: 30px;
+}
+
+/* ===== section.hero ===== ----------*/
+
+.hero {
+    position: relative;
+    min-height: 582px;
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 30px;
+}
+
+.hero__list {
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 15px;
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.hero__item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.hero__item:hover {
+    color: var(--blue-text);
+}
+
+.hero__item:hover path {
+    fill: var(--blue-text);
+}
+
+.box {
+    height: 53px;
+    max-width: 288px;
+    width: 100%;
+}
+
+video {
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero::before {
+    content: '';
+    background: #102e49cc;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100vw;
+}
+
+/* ===== section.gallery ===== ----------*/
+.gallery {
+    display: grid;
+    grid-auto-flow: dense;
+}
+
+.gallery__product {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.gallery__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery__hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1d6fb6b3;
+    height: 29.44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-text);
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.gallery__product:hover p {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+
+.gallery__product:nth-child(10n+1) p {
+    height: 26.82%;
+    font-size: 24px;
+}
+
+.gallery__product:nth-child(10n+6) p {
+    height: 26.82%;
+    font-size: 24px;
+}
+
+
+/* Автоматическое увеличение, со смещением в лево, каждой 10 картинки, начиная с первой */
+.gallery__product:nth-child(10n+1) {
+    grid-area: span 2 / span 2;
+}
+
+/* Автоматическое увеличение, со смещением в лево, каждой 10 картинки, начиная с шестой */
+.gallery__product:nth-child(10n+6) {
+    grid-area: span 2 / span 2 / auto / -1;
+}
+
+/* Корректировка логики заполнения "grid-auto-flow: dense", смотрите на цифры во всплывающих надписях "подробнее" */
+.gallery__product:nth-child(10n+7),
+.gallery__product:nth-child(10n+9) {
+    grid-column-start: 2;
+}
+
+/* ===== section.hits ===== ----------*/
+.hits {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.hits__offering {
+    position: relative;
+    border: 1px solid #D0DCE7;
+}
+
+.hits__img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 61.97%;
+    object-fit: cover;
+}
+
+.hits_keyboard {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 38.03%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== footer ===== */
+
+footer {
+    min-height: 80px;
+    background: #788088;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-text);
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
