@@ -1,0 +1,39 @@
+
+.open {
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.background--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.window {
+    display: grid;
+    justify-items: end;
+    background: rgb(214, 214, 214);
+    height: 30vh;
+    width: 30vw;
+    padding: 20px;
+}
