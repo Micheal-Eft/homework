@@ -804,7 +804,7 @@ footer {
     }
 
     footer {
-        padding: 9.38vw 0;
+        padding: 15px 0 9.38vw;
     }
 
     .modal__window {
@@ -815,4 +815,5 @@ footer {
         width: 50%;
         margin: -10.83vw 0 2.5vw 2vw;
     }
+
 }
