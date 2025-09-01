@@ -636,14 +636,12 @@ footer {
 
 .fiald__input:hover  {
     transition: var(--transition);
-    color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
 .fiald__input:hover::placeholder {
     transition: var(--transition);
     color: var(--accent-color);
-    border-color: var(--accent-color);
 }
 
 .fiald__input:focus {
@@ -821,4 +819,5 @@ footer {
         width: 50%;
         margin: -10.83vw 0 2.5vw 2vw;
     }
+
 }
