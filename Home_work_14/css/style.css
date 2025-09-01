@@ -630,22 +630,28 @@ footer {
     transition: var(--transition);
 }
 
-.modal__form-input::placeholder {
+.fiald__input::placeholder {
     color: #AC907A;
 }
 
-.modal__form-input:hover,
-.modal__form-input:hover::placeholder {
+.fiald__input:hover  {
     transition: var(--transition);
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.modal__form-input:focus {
-    padding: 26px 28px 12px;
+.fiald__input:hover::placeholder {
+    transition: var(--transition);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
-.modal__form-input:focus+span {
+.fiald__input:focus {
+    padding: 26px 28px 12px;
+    border-color: var(--accent-color);
+}
+
+.fiald__input:focus+span {
     opacity: 1;
     visibility: visible;
 }
@@ -804,7 +810,7 @@ footer {
     }
 
     footer {
-        padding: 40px 0 9.38vw;
+        padding: 40px 0 9.38vw
     }
 
     .modal__window {
@@ -815,6 +821,4 @@ footer {
         width: 50%;
         margin: -10.83vw 0 2.5vw 2vw;
     }
-
 }
-
