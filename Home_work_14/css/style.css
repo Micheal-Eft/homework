@@ -245,6 +245,7 @@ h1 {
 
 .hero__text {
     max-width: 360px;
+    margin-bottom: 40px;
 }
 
 .hero__button {
@@ -269,6 +270,7 @@ h1 {
     align-items: center;
     gap: 10px;
     max-width: 200px;
+    width: 100%;
     text-align: left;
 }
 
@@ -460,7 +462,7 @@ footer {
 }
 
 .footer__coll-link {
-    display: block;
+    display: inline-block;
     padding: 5px 0;
     position: relative;
     z-index: 1;
@@ -501,6 +503,7 @@ footer {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.6;
+    transition: var(--transition);
 }
 
 .footer__col-tel {
@@ -912,7 +915,9 @@ footer {
 /* ===== Маштабирование ===== */
 
 @media (max-width: 1240px) {
-    .wrapper, .main {
+
+    .wrapper,
+    .main {
         gap: 10.94vw;
     }
 
@@ -1054,6 +1059,10 @@ footer {
     .tab-controls__link {
         padding: 6px 20px;
     }
+
+    .hero__text {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1078,7 +1087,7 @@ footer {
     }
 
     .about__grid-item {
-        padding: 0 9px 12px;
+        padding: 9px 12px;
     }
 
     .footer__inner {
@@ -1163,7 +1172,7 @@ footer {
 
     .program__top {
         margin-bottom: 20px;
-    })
+    }
 
     .program__action {
         grid-template: none;
