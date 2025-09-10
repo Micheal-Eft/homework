@@ -1,0 +1,81 @@
+:root {
+    --accent-color: #FFA55C;
+    --accent-color-2: #CEAAD0;
+    --title: #1F1711;
+    --general-text: #312C27;
+    --general-bg: #FFF9F4;
+    --general-bg-2: #FFE0CB;
+    --transition: all .4s;
+    --border-radius: 20px;
+
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--general-text);
+    background: var(--general-bg);
+    min-width: 310px;
+}
+
+.body--opend-menu {
+    overflow: hidden;
+}
+
+.body--modal-opened {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    flex-grow: 1
+}
+
+.main__gallery {
+}
+
+.conteiner {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    color: var(--title);
+    font-family: 'Gabriola', 'Times New Roman', serif;
+    font-size: 74px;
+    line-height: 0.82;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 3px 15px;
+    height: 62px;
+
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: #FF9138;
+}

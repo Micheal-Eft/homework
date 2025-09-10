@@ -79,7 +79,7 @@
             const accordionItem = accordionControl.parentElement
             const accordionContent = accordionControl.nextElementSibling
 
-            if (accordionOpenedItem && accordionOpenedItem != accordionItem){
+            if (accordionOpenedItem && accordionOpenedItem != accordionItem) {
                 accordionOpenedItem.classList.remove('accordion-list__item--opened')
                 accordionOpenedContent.style.maxHeight = null
             }
@@ -94,4 +94,36 @@
             }
         })
     })
+
+    // =====
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 15,
+        slidesPerView: 2,
+
+        // If we need pagination
+        pagination: {
+            el: '.gallery__pagination',
+            type: 'fraction'
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+
+        breakpoints: {
+            601: {
+                slidesPerView: 3,
+            },
+            801: {
+                spaceBetween: 32,
+            },
+            1101: {
+                slidesPerView: 4,
+            }
+        }
+    });
 })()
