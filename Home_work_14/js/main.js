@@ -126,4 +126,33 @@
             }
         }
     });
+
+    // =====
+
+    const swiper_2 = new Swiper('.testimonials__slider', {
+
+        spaceBetween: 0,
+        slidesPerView: 1,
+        centeredSlides: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.testimonials__next',
+            prevEl: '.testimonials__prev',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+
+        breakpoints: {
+            901: {
+                slidesPerView: 1.5,
+            },
+            1201: {
+                slidesPerView: 2.1,
+            },
+        }
+    });
 })()
