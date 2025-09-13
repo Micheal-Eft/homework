@@ -5,9 +5,14 @@
     --general-text: #312C27;
     --general-bg: #FFF9F4;
     --general-bg-2: #FFE0CB;
+    --input-color: #AC907A;
     --transition: all .4s;
     --border-radius: 20px;
 
+}
+
+html {
+    scroll-behavior:smooth
 }
 
 body {
@@ -33,7 +38,6 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 140px;
 }
 
 main {
@@ -43,11 +47,13 @@ main {
     flex-grow: 1
 }
 
-.main__gallery {
+section:target {
+    scroll-margin-top: 10px;
 }
 
-.main__testimonials {
-}
+.main__gallery {}
+
+.main__testimonials {}
 
 .conteiner {
     max-width: 1310px;

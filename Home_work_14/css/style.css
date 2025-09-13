@@ -115,7 +115,6 @@
 .about__grid-text {}
 
 /* ===== section.program ===== */
-.program {}
 
 .program__top {
     display: flex;
@@ -217,6 +216,7 @@
 
 .program__picture {
     width: 100%;
+    filter: drop-shadow(0 4px 20px #dcc9b966);
 }
 
 .tab-controls {
@@ -505,10 +505,8 @@
     max-width: 632px;
 }
 
-.testimonials__title {}
-
-.title {
-    margin-bottom: 20px;
+.testimonials__title {
+    margin-bottom: 20px
 }
 
 .testimonials__text {}
@@ -580,8 +578,8 @@
     opacity: 0;
 }
 
-.swiper-slide-prev,
-.swiper-slide-next {
+.testimonials__slide.swiper-slide-prev,
+.testimonials__slide.swiper-slide-next {
     opacity: 0.5;
 }
 
@@ -640,8 +638,138 @@
     background: var(--general-bg-2);
     height: 7px;
 }
+
 .testimonials__scrollbar .swiper-scrollbar-drag {
     background: var(--accent-color);
+}
+
+/* ===== section.contact ===== */
+
+.contact {
+    padding: 140px 0;
+    background: url('../img/decor/bg-contact.png') 50% 0 / cover no-repeat;
+}
+
+.contact__inner {
+    position: relative;
+    display: flex;
+    align-items: end;
+    gap: 84px;
+}
+
+.contact__inner::before {
+    content: url('../img/decor/berries.png');
+    position: absolute;
+    top: -4%;
+    left: 0;
+}
+
+.contact__inner::after {
+    content: url('../img/decor/berries-2.png');
+    position: absolute;
+    top: 4%;
+    right: 0;
+}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0 4px 30px #c6b0a14d);
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__form {}
+
+.contack__labal {
+    margin-bottom: 10px;
+}
+
+.contact__input {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    border-radius: 100px;
+    border: 1px solid var(--input-color);
+    padding: 19px 28px;
+    font-size: 16px;
+    transition: var(--transition);
+    margin-bottom: 20px;
+}
+
+.contact__input::placeholder {
+    color: var(--input-color);
+}
+
+.contact__input:hover {
+    transition: var(--transition);
+    border-color: var(--accent-color);
+}
+
+.contact__input:hover::placeholder {
+    transition: var(--transition);
+    color: var(--accent-color)
+}
+
+.contact__chak-label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    max-width: 288px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact__checkbox-link {
+    text-decoration: underline;
+    transition: var(--transition);
+}
+
+.contact__checkbox-link:hover {
+    color: var(--accent-color);
+}
+
+.contact__checkbox {
+    position: relative;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--input-color);
+    transition: var(--transition);
+    border-radius: 5px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.contact__checkbox:hover {
+    border: 1.5px solid var(--accent-color);
+}
+
+.contact__checkbox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../img/icons/check.svg') 50% 50% no-repeat;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.contact__checkbox:checked {
+    border: 1.5px solid var(--accent-color);
+    background: var(--accent-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
 }
 
 /* ===== Модалка ===== */
@@ -682,7 +810,7 @@
 .modal__cansel:hover path,
 .modal__cansel:hover rect {
     transition: var(--transition);
-    stroke: #AC907A;
+    stroke: var(--input-color);
 }
 
 .modal__cansel-button {}
@@ -718,7 +846,7 @@
     left: 28px;
     top: 12px;
     font-size: 11px;
-    color: #AC907A;
+    color: var(--input-color);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
@@ -729,14 +857,14 @@
     width: 100%;
     background: #00000000;
     border-radius: 100px;
-    border: 1px solid #AC907A;
+    border: 1px solid var(--input-color);
     padding: 19px 28px;
     font-size: 16px;
     transition: var(--transition);
 }
 
 .fiald__input::placeholder {
-    color: #AC907A;
+    color: var(--input-color);
 }
 
 .fiald__input:hover {
@@ -763,7 +891,10 @@
 
 @media (max-width: 1240px) {
 
-    .wrapper,
+    header {
+        margin-bottom: 10.94vw;
+    }
+
     .main {
         gap: 10.94vw;
     }
@@ -809,6 +940,14 @@
         margin-top: 30px;
         position: static;
         max-width: none;
+    }
+
+    .contact__inner {
+        align-items: center;
+    }
+
+    .contact__inner::after {
+        top: -20%;
     }
 
 }
@@ -884,9 +1023,17 @@
         max-width: none;
     }
 
-    .testimonials__scrollbar.swiper-scrollbar{
+    .testimonials__scrollbar.swiper-scrollbar {
         width: 50%;
         margin: 0 auto;
+    }
+
+    .contact__img {
+        display: none;
+    }
+
+    .contact__inner {
+        justify-content: center;
     }
 }
 
@@ -936,9 +1083,17 @@
     .testimonials__nav {
         align-self: end;
     }
+
+    .contact__inner::before {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
+
+    .contact {
+        padding-bottom: 80px;
+    }
 
     .title {
         font-size: 12.33vw;
@@ -1082,9 +1237,29 @@
         margin-bottom: 20px;
     }
 
-    .testimonials__quote{
-        overflow: scroll;
-        scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0);
+    .testimonials__quote {
+        overflow: auto;
     }
 
+    @supports selector(-webkit-scrollbar) {
+        .testimonials__quote::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .testimonials__quote::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: var(--border-radius);
+        }
+    }
+
+    @supports not selector(-webkit-scrollbar) {
+        .testimonials__quote {
+            scrollbar-color: var(--accent-color) black;
+        }
+    }
+
+    .contact__title,
+    .contact__text {
+        text-align: center;
+    }
 }
