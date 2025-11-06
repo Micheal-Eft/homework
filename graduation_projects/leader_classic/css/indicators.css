@@ -1,0 +1,29 @@
+.indicators__inner {
+    margin-bottom: 246px;
+}
+
+.indicators__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 34.5px;
+}
+
+.indicators__number {
+    background: linear-gradient(91deg, #65CA7C 1.74%, #4F815C 27.19%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.172;
+
+    margin-bottom: 20px;
+}
+
+.indicators__text {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.252;
+}
