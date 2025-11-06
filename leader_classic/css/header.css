@@ -130,6 +130,10 @@
     cursor: pointer;
 }
 
+.lang__icon {
+    border-radius: 50%;
+}
+
 .langs-box__selection {
     position: absolute;
     overflow: hidden;
@@ -212,4 +216,5 @@
     max-width: none;
     width: auto;
     border-radius: var(--border-radius);
+
 }
