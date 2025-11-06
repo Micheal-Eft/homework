@@ -1,0 +1,72 @@
+.income__inner {
+    margin-bottom: 162px;
+}
+
+.income__companies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.income__companies-inner {
+    position: relative;
+    margin: 85px 0 109px;
+    width: 100%;
+    min-height: 286px;
+}
+
+.income__companies-autoswiper {
+    min-height: 286px;
+    width: 100%;
+}
+
+.income__companies-content {
+    min-height: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.income__company:nth-child(2n+1) {
+    margin-top: auto;
+}
+
+.income__company:nth-child(2n+2) {
+    margin-bottom: auto;
+}
+
+.income__company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+
+.income__logo-company {
+    border-radius: 15%;
+}
+
+.income__percent {
+    color: #4BD879;
+    font-size: 30px;
+    line-height: 1.302;
+}
+
+.income__nominal-value {
+    border-radius: 18px;
+    background: #262626;
+    font-size: 20px;
+    line-height: 1.302;
+    width: 124px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.income__text {
+    margin-bottom: 34px;
+    font-size: 25px;
+}

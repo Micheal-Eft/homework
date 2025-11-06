@@ -1,0 +1,257 @@
+:root {
+    --myColor1: ;
+    --myColor2: ;
+}
+
+.portfolio-selection {}
+
+.portfolio-selection__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.235%;
+    margin-bottom: 213px;
+}
+
+.portfolio-selection__settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-selection__settings-profitability {
+    position: relative;
+}
+
+/* Спидометр */
+.portfolio-selection__progressbar {
+    overflow: visible;
+    min-width: 290px;
+    min-height: 146px;
+    width: 690px;
+    height: 345px;
+    margin-top: 104px;
+}
+
+/* -- Градиент спидометра */
+.portfolio-selection__settings-profitability {}
+
+.portfolio-selection__settings-profitability--easy {
+    --myColor1: #405548;
+    --myColor2: #6ADB83;
+}
+
+.portfolio-selection__settings-profitability--medium {
+    --myColor1: #555540;
+    --myColor2: #dbd96a;
+}
+
+.portfolio-selection__settings-profitability--hard {
+    --myColor1: #554040;
+    --myColor2: #db6a6a;
+}
+
+.portfolio-selection__progressbar-gradient-start {
+    transition: var(--transition);
+    stop-color: var(--myColor1);
+}
+
+.portfolio-selection__progressbar-gradient-end {
+    transition: var(--transition);
+    stop-color: var(--myColor2);
+}
+
+/* -- Тень спидометра */
+.portfolio-selection__settings-profitability--easy .portfolio-selection__progressbar-shadow {
+    flood-color: #6ADB83;
+}
+
+.portfolio-selection__settings-profitability--medium .portfolio-selection__progressbar-shadow {
+    flood-color: #d0db6a;
+}
+
+.portfolio-selection__settings-profitability--hard .portfolio-selection__progressbar-shadow {
+    flood-color: #db6a6a;
+}
+
+/* -- Спидометр общее */
+.portfolio-selection__progressbar circle {
+    cx: 50%;
+    cy: 100%;
+    r: 61%;
+    stroke-width: 5%;
+    stroke-linecap: round;
+    stroke-dashoffset: -194%;
+}
+
+/* -- Спидометр не заполненый */
+.portfolio-selection__progressbar-body {
+    stroke: #303030;
+    stroke-dasharray: 186.5%, 200%;
+}
+
+/* -- Спидометр заполненый */
+.portfolio-selection__progressbar-progress {
+    stroke: url(#myGradient);
+    stroke-dasharray: 0, 200%;
+}
+
+/* Показатель процента */
+.portfolio-selection__progressbar-procent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    stroke: none;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1.172;
+}
+
+.portfolio-selection__progressbar-procent::before {
+    content: "Доходность";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.567;
+}
+
+.portfolio-selection__progressbar-procent::after {
+    margin-top: 16px;
+    content: "";
+    display: block;
+    padding: 5px;
+    border-radius: 35px;
+    max-width: 172px;
+    width: 100%;
+    font-weight: 400;
+
+    font-size: 18px;
+    line-height: 1.262;
+}
+
+.portfolio-selection__settings-profitability--easy .portfolio-selection__progressbar-procent::after {
+    content: "Низкий риск";
+    background: linear-gradient(93deg, rgba(66, 89, 74, 0.40) 8.36%, rgba(101, 204, 125, 0.22) 100.64%);
+}
+
+.portfolio-selection__settings-profitability--medium .portfolio-selection__progressbar-procent::after {
+    content: "Средний риск";
+    background: linear-gradient(93deg, rgba(87, 89, 66, 0.8) 8.36%, rgba(204, 202, 101, 0.44) 100.64%);
+}
+
+.portfolio-selection__settings-profitability--hard .portfolio-selection__progressbar-procent::after {
+    content: "Высокий риск";
+    background: linear-gradient(93deg, rgba(89, 66, 66, 0.8) 8.36%, rgba(204, 101, 101, 0.44) 100.64%);
+}
+
+.portfolio-selection__scrollbar {
+    --scrollprogress: 0;
+    --width-shadow: 0;
+    --padding-right: 18px;
+    --box-shadow: 0;
+    position: absolute;
+
+    height: 10px;
+    min-width: 169px;
+    width: 45.8%;
+
+    left: 50%;
+    transform: translate(-50%, -100%);
+    bottom: 0;
+
+    -webkit-appearance: none;
+    background: #303030;
+}
+
+.portfolio-selection__scrollbar::after {
+    position: absolute;
+    content: '';
+
+    padding-right: var(--padding-right);
+
+    height: 100%;
+    width: var(--scrollprogress);
+
+    z-index: -1;
+
+    transition: background var(--transition);
+    box-shadow: inset var(--width-shadow) 0 50px -50px var(--myColor1);
+    background: var(--myColor2);
+}
+
+.portfolio-selection__scrollbar::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+}
+
+.portfolio-selection__scrollbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: ew-resize;
+    background: var(--myColor2);
+    transform: translateY(-25%);
+    transition: background var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.portfolio-selection__settings-control {
+    margin-top: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-selection__radios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+    line-height: 1.567;
+}
+
+.portfolio-selection__radio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.portfolio-selection__radio-checkbox {
+    -webkit-appearance: none;
+    font-size: 25px;
+    height: 1.68em;
+    width: 1.68em;
+    border: double 4px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #405548 33.33%, #6ADB83);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.portfolio-selection__radio-checkbox:checked {
+    border-width: .6em;
+}
+
+.button-light--mobile {
+    margin-top: 4.2016vw;
+    display: none;
+}
+
+.portfolio-selection__heading {
+    text-align: left;
+    width: 43.7538%;
+    min-width: 577px;
+}
+
+.portfolio-selection__title {
+    font-size: 65px;
+}
+
+.portfolio-selection__text {
+    max-width: 510px;
+    margin-bottom: 50px;
+}
